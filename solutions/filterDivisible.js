@@ -18,7 +18,7 @@ function filterDivisible(numbers, divisor) {
             return null
         } //Be mindful of division by 0. If the given number is 0 then return null.
 
-        else if (numbers[i] % divisor === 0) {
+        else if (numbers[i] % divisor === 0) { //no need to round? Full numbers?
             numbersThatAreDivisible.push(numbers[i])
         } //find the numbers in the array that are divisible with the provided number and return them in an array.
 

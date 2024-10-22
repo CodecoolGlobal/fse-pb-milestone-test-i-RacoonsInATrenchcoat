@@ -12,7 +12,32 @@ The wrong object may contain the key abacus but with false value! There may only
 */
 
 function findAbacus(array) {
-
+    //let locationAbacus = 0
+    for (let i = 0; i < array.length; i++)
+        if (array[i].abacus === true) { // returns the index of the object which contains the key abacus and its value is true
+            return i;
+        }
+        else { //ignore other scenarios
+        }
+    return null //If none of the objects contain Abacus, return null !
 }
 
 module.exports = findAbacus;
+
+/*
+it('3 objects, should return 1', () => {
+  const obj0 = {
+    'name': 'Janos',
+    'age': 30,
+  };
+  const obj1 = {
+    'name': 'Abacus',
+    'abacus': true,
+  };
+  const obj2 = {
+    'index': 2,
+  };
+  expect(findAbacus([obj0, obj1, obj2]))
+    .toStrictEqual(1);
+});
+*/
